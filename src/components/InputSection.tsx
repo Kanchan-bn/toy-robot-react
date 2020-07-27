@@ -1,12 +1,24 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import { RobotImg } from "./RobotImg"
 
-type Props = {
-    onPosition: Function,
-    onDirection: Function,
-}
 
-export const InputSection: FC<Props> = (props) => {
+export const InputSection: FC<{}> = () => {
+
+    const [state, setPlace] = useState({});
+
+    const setXposition = (event: React.FormEvent<HTMLInputElement>) => {
+    //    setPlace({...state, xpos: event.target.value});
+    }
+
+    const setYposition = (event: React.FormEvent<HTMLInputElement>) => {
+        // setPlace({...state, ypos: event.target.value});
+    }
+
+    const setDirection = (event: React.FormEvent<HTMLInputElement>) => {
+        // setPlace({...state, facing: event.target.value});
+    }
+
+
     return(
         <>
             <div>
@@ -14,12 +26,13 @@ export const InputSection: FC<Props> = (props) => {
                 Then click on the buttons to move the robot around
             </div>
             <div style={{marginTop:"1em"}}>
+               
+                <input type="number" style={{width:"3em", height:"3em", marginRight:"0.5em"}} placeholder="x" onChange={e => setXposition(e)} name="xpos"></input>
+                <input type="number" style={{width:"3em", height:"3em", marginRight:"0.5em"}} placeholder="y" onChange={e => setYposition(e)} name="ypos"></input>
+                <input type="text" style={{width:"5em", height:"3em", marginRight:"0.5em" }} placeholder="direction" onChange={e => setDirection(e)} name="facing"></input>
                 <button style={{padding:"0.5em", border: 0, backgroundColor:"#6B5B95", color:"white"}}>
                     PLACE 
                 </button>
-                <input type="number" style={{width:"3em", height:"3em", marginRight:"0.5em"}} placeholder="x" onChange={e => props.onPosition(e)} name="xpos"></input>
-                <input type="number" style={{width:"3em", height:"3em", marginRight:"0.5em"}} placeholder="y" onChange={e => props.onPosition(e)} name="ypos"></input>
-                <input type="text" style={{width:"5em", height:"3em" }} placeholder="direction" onChange={e => props.onDirection(e)} name="facing"></input>
                 
             </div>
             <div style={{marginTop:"1em"}}>

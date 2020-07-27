@@ -5,14 +5,6 @@ import { InputSection } from './InputSection';
 export const RobotApp: FC<{}> = () => {
     const [state, setPosition] = useState({});
 
-    const handlePosition = (event: React.FormEvent<HTMLInputElement>) => {
-        setPosition({...state, [event.target.name] : event.target.value})
-    }
-
-    const handleDirection = () => {
-
-    }
-
     const handlePlace = () => {
 
     }
@@ -21,7 +13,7 @@ export const RobotApp: FC<{}> = () => {
     return(
     <>
         <div style={{display:"inline-block", width:"40%", verticalAlign:"top"}}>
-          <InputSection onPosition={handlePosition} onDirection={handleDirection} onPlace={handlePlace} />
+          <InputSection />
         </div>
         <div style={{display:"inline-block"}}>
           <Table />

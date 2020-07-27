@@ -9,7 +9,7 @@ export const Table: FC<{}> = () => {
     let col = <div style={{height:"7em", width:"7em", margin: "0.1em", backgroundColor:"lightGrey", borderRadius:"0.3em"}}></div>;
 
     for(let j=0; j < maxColumns; j++) {
-    cols.push(<div style={{display:"inline-block"}}>{col}</div>)
+    cols.push(<div style={{display:"inline-block"}} key={j}>{col}</div>)
     }
 
     for(let i=0; i<maxRows; i++) {

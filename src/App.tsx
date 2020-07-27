@@ -8,9 +8,9 @@ function App() {
       <header className="App-header">
           Play with the Toy Robot
       </header>
-      <body>
+      <div>
         <RobotApp />
-      </body>
+      </div>
     </div>
   );
 }
