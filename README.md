@@ -2,6 +2,8 @@
 ```npm install``` to install dependencies
 ```npm start``` to view the UI
 
+### TODO (implement button onclicks to place and move the robot)
+
 
 
 
