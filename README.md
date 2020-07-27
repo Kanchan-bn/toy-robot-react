@@ -1,3 +1,10 @@
+# Toy robot simulator (UI completed)
+```npm install``` to install dependencies
+```npm start``` to view the UI
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
